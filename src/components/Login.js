@@ -6,13 +6,10 @@
  */
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
-import { TabNavigator } from 'react-navigation';
 import { connect } from 'react-redux';
 
-import Profile from './ProfileScreen'
-class Home extends Component {
+class Login extends Component {
 	render() {
-		console.log(this.props)
 		return (
 			<View style={styles.container}>
 				<Text>HomeScreen11111111111</Text>
@@ -41,20 +38,4 @@ const mapStateToProps = state => ({
 	state: state,
 });
 
-const ConnectHome = connect(mapStateToProps)(Home);
-const HomeScreen = TabNavigator({
-	Home: {
-		screen: ConnectHome,
-	},
-	Profile: {
-		screen: Profile,
-	}
-}, {
-		tabBarPosition: 'bottom',
-		animationEnabled: true,
-		tabBarOptions: {
-			activeTintColor: '#e91e63',
-		},
-	});
-
-export default HomeScreen;
+export default connect(mapStateToProps)(Login);
