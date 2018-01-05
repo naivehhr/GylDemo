@@ -1,14 +1,15 @@
 /*
  * @Author: aran.hu 
  * @Date: 2018-01-04 11:14:07 
- * @Last Modified by:   aran.hu 
- * @Last Modified time: 2018-01-04 11:14:07 
+ * @Last Modified by: aran.hu
+ * @Last Modified time: 2018-01-05 10:55:07
  */
 //import liraries
+
+
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-// create a component
 class ProfileScreen extends Component {
 	render() {
 		return (

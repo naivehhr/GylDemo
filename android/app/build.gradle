@@ -75,8 +75,12 @@ import com.android.build.OutputFile
 project.ext.react = [
     entryFile: "index.js"
 ]
-
 apply from: "../../node_modules/react-native/react.gradle"
+
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf', 'FontAwesome.ttf', 'Foundation.ttf' ] // Name of the font files you want to copy
+]
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -137,6 +141,8 @@ android {
 }
 
 dependencies {
+    compile project(':@remobile/react-native-toast')
+    compile project(':react-native-vector-icons')
     compile project(':react-native-refreshflatlist')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"

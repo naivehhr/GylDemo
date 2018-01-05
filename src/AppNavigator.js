@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 10:22:45 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-04 18:22:38
+ * @Last Modified time: 2018-01-05 15:58:27
  */
 
 import React from 'react';
@@ -12,20 +12,25 @@ import { connect } from 'react-redux';
 
 import HomeScreen from './HomeScreen'
 import DetailsScreen from './DetailsScreen';
-
+import LoginPage from './containers/Login'
 export const AppNavigator = StackNavigator({
   Home: {
     screen: HomeScreen,
-    navigationOptions: {
-      headerTitle: 'Home',
-    },
   },
   Details: {
     screen: DetailsScreen,
     navigationOptions: {
-      headerTitle: 'Details',
+      headerTitle: '详情',
     },
   },
+  Login: {
+    screen: LoginPage,
+    navigationOptions: {
+      headerTitle: '登录',
+    },
+  }
+}, {
+  initialRouteName: 'Home'
 });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (

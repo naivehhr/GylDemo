@@ -2,24 +2,31 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 11:14:04 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-04 18:30:52
+ * @Last Modified time: 2018-01-05 15:55:48
  */
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
-import { connect } from 'react-redux';
+import {
+	View,
+	Text,
+	StyleSheet,
+	Button,
+	TextInput
+} from 'react-native';
 
-class Login extends Component {
+export default class Login extends Component {
+	constructor(props) {
+		super(props);
+		this.state = { text: 'Useless Placeholder' };
+	}
+
 	render() {
 		return (
 			<View style={styles.container}>
-				<Text>HomeScreen11111111111</Text>
-				<Button
-					onPress={() => this.props.navigation.navigate('Profile')}
-					title="Go to Profile"
-				/>
-				<Button
-					onPress={() => this.props.navigation.navigate('Details')}
-					title="Go to details"
+				<Text>Login</Text>
+				<TextInput
+					style={{ height: 40, borderColor: 'gray', borderWidth: 1, width: 100 }}
+					onChangeText={(text) => this.setState({ text })}
+					value={this.state.text}
 				/>
 			</View>
 		);
@@ -34,8 +41,6 @@ const styles = StyleSheet.create({
 		backgroundColor: '#2c3e50',
 	},
 });
-const mapStateToProps = state => ({
-	state: state,
-});
 
-export default connect(mapStateToProps)(Login);
+
+

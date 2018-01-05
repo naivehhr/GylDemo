@@ -2,20 +2,40 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 11:14:04 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-04 18:30:52
+ * @Last Modified time: 2018-01-05 17:51:46
  */
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import { TabNavigator } from 'react-navigation';
 import { connect } from 'react-redux';
-
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import Profile from './ProfileScreen'
+import { UserAction } from './actions'
+import Toast from '@remobile/react-native-toast'
 class Home extends Component {
+
+	constructor(props){
+		super(props)
+	}
+	
+	componentWillMount () {
+		const { user, navigation } = this.props
+		if(!user.isLoggedIn) {
+			navigation.navigate('Login')
+		}
+	}
+	
+	componentDidMount() {
+		setTimeout(()=>{
+			Toast.show( "this is a message")
+			// this.props.dispatch(UserAction.updateUserInfo({isLoggedIn: true}))
+		},2000)
+	}
+
 	render() {
-		console.log(this.props)
 		return (
 			<View style={styles.container}>
-				<Text>HomeScreen11111111111</Text>
+				<Text>HomeScreen12</Text>
 				<Button
 					onPress={() => this.props.navigation.navigate('Profile')}
 					title="Go to Profile"
@@ -34,20 +54,44 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#2c3e50',
+		backgroundColor: '#e1aca1',
 	},
 });
 const mapStateToProps = state => ({
-	state: state,
+	user: state.user,
 });
 
 const ConnectHome = connect(mapStateToProps)(Home);
 const HomeScreen = TabNavigator({
 	Home: {
 		screen: ConnectHome,
+		navigationOptions: {
+			title:"首页",
+			tabBarLabel: '首页',
+			headerTintColor: 'blue',
+			tabBarIcon: ({ tintColor, focused }) => (
+				<Ionicons
+					name={focused ? 'ios-home' : 'ios-home-outline'}
+					size={26}
+					style={{ color: tintColor }}
+				/>
+			),
+		},
 	},
 	Profile: {
 		screen: Profile,
+		navigationOptions: {
+			title:"我",
+			tabBarLabel: '我',
+			headerTintColor: 'blue',
+			tabBarIcon: ({ tintColor, focused }) => (
+				<Ionicons
+					name={focused ? 'ios-person' : 'ios-person-outline'}
+					size={26}
+					style={{ color: tintColor, fontWeight: 'bold' }}
+				/>
+			),
+		},
 	}
 }, {
 		tabBarPosition: 'bottom',

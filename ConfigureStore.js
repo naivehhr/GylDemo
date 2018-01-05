@@ -1,20 +1,26 @@
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
 import thunk from 'redux-thunk'
-import {persistStore, autoRehydrate} from 'redux-persist';
-import appReducer from './src/reducer'
+import {persistStore, persistCombineReducers} from 'redux-persist';
+import storage from 'redux-persist/lib/storage'
+import * as appReducer from './src/reducer'
+
+const config = {
+  key: 'root',
+  storage,
+}
+const reducer = persistCombineReducers(config, appReducer)
+
 const enhancer = compose(
   applyMiddleware(
     thunk
-  ),
-  autoRehydrate()
+  )
 )
 
-export default function configureStore(onComplete) {
-  const store = createStore(
-    appReducer,
+export function configureStore(onComplete) {
+  let store = createStore(
+    reducer,
     enhancer
   )
-  // 这个暂时先这么解决吧
-  // persistStore(store,{blacklist: ['UserReducer']}, onComplete)
-  return store;
+  let persistor = persistStore(store)
+  return { persistor, store }
 }
