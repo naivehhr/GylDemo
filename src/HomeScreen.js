@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 11:14:04 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-05 17:51:46
+ * @Last Modified time: 2018-01-06 13:44:48
  */
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
@@ -27,7 +27,7 @@ class Home extends Component {
 	
 	componentDidMount() {
 		setTimeout(()=>{
-			Toast.show( "this is a message")
+			// Toast.show( "this is a message")
 			// this.props.dispatch(UserAction.updateUserInfo({isLoggedIn: true}))
 		},2000)
 	}
@@ -67,6 +67,8 @@ const HomeScreen = TabNavigator({
 		screen: ConnectHome,
 		navigationOptions: {
 			title:"首页",
+			header: null,
+			headerRight: <Button title="Info" />,
 			tabBarLabel: '首页',
 			headerTintColor: 'blue',
 			tabBarIcon: ({ tintColor, focused }) => (
@@ -82,6 +84,7 @@ const HomeScreen = TabNavigator({
 		screen: Profile,
 		navigationOptions: {
 			title:"我",
+			header: null, // 这就先都空着吧
 			tabBarLabel: '我',
 			headerTintColor: 'blue',
 			tabBarIcon: ({ tintColor, focused }) => (
@@ -99,6 +102,7 @@ const HomeScreen = TabNavigator({
 		tabBarOptions: {
 			activeTintColor: '#e91e63',
 		},
+		headerMode:"screen"
 	});
 
 export default HomeScreen;

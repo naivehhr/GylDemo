@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 10:22:45 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-05 15:58:27
+ * @Last Modified time: 2018-01-06 17:43:26
  */
 
 import React from 'react';
@@ -30,7 +30,7 @@ export const AppNavigator = StackNavigator({
     },
   }
 }, {
-  initialRouteName: 'Home'
+  initialRouteName: 'Login',
 });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (

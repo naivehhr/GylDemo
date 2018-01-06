@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 13:31:31 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-04 18:22:44
+ * @Last Modified time: 2018-01-06 11:12:24
  */
 
 import React, { Component } from 'react';
@@ -13,10 +13,6 @@ class DetailsScreen extends Component {
 		return (
 			<View style={styles.container}>
 				<Text>DetailsScreen</Text>
-				<Button
-					onPress={() => this.props.navigation.navigate('Profile')}
-					title="Go to details"
-				/>
 			</View>
 		);
 	}
