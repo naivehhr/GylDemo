@@ -68,7 +68,7 @@ const HomeScreen = TabNavigator({
 		navigationOptions: {
 			title:"首页",
 			header: null,
-			headerRight: <Button title="Info" />,
+			headerRight: <Button title="Info" onPress={()=> {}}/>,
 			tabBarLabel: '首页',
 			headerTintColor: 'blue',
 			tabBarIcon: ({ tintColor, focused }) => (

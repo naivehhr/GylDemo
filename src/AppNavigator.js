@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 
 import HomeScreen from './HomeScreen'
 import DetailsScreen from './DetailsScreen';
-import LoginPage from './containers/Login'
+// import LoginPage from './containers/Login'
 export const AppNavigator = StackNavigator({
   Home: {
     screen: HomeScreen,
@@ -23,14 +23,14 @@ export const AppNavigator = StackNavigator({
       headerTitle: '详情',
     },
   },
-  Login: {
-    screen: LoginPage,
-    navigationOptions: {
-      headerTitle: '登录',
-    },
-  }
+  // Login: {
+  //   screen: LoginPage,
+  //   navigationOptions: {
+  //     headerTitle: '登录',
+  //   },
+  // }
 }, {
-  initialRouteName: 'Login',
+  initialRouteName: 'Details',
 });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
