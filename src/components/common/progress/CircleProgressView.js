@@ -196,7 +196,7 @@ export  default  class CircleProgressView extends Component {
         //     .moveTo(25, 0)
         //     .push()
         //     .arcTo(p[i + 5], p[i + 6], p[i], p[i + 1], p[i + 3], !+p[i + 4], +p[i + 2]);
-
+        
         const path0 = this.getBase(0);
         const path00 = this.getBase(1);
 

@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 11:14:04 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-06 15:11:28
+ * @Last Modified time: 2018-01-08 10:42:47
  */
 import React, { Component } from 'react';
 import {
@@ -18,8 +18,8 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
-import { FaeComponent } from '@faegroup/common'
 import dismissKeyboard from 'react-native-dismiss-keyboard'
+import { FaeComponent } from '@faegroup/common'
 const {
   color_red,
   weight_light,

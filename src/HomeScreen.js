@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 11:14:04 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-06 13:44:48
+ * @Last Modified time: 2018-01-08 19:13:51
  */
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
@@ -26,6 +26,8 @@ class Home extends Component {
 	}
 	
 	componentDidMount() {
+		console.log(this.props)
+
 		setTimeout(()=>{
 			// Toast.show( "this is a message")
 			// this.props.dispatch(UserAction.updateUserInfo({isLoggedIn: true}))

@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 10:22:45 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-06 17:43:26
+ * @Last Modified time: 2018-01-08 19:15:52
  */
 
 import React from 'react';
@@ -12,7 +12,11 @@ import { connect } from 'react-redux';
 
 import HomeScreen from './HomeScreen'
 import DetailsScreen from './DetailsScreen';
-// import LoginPage from './containers/Login'
+// import UserHome from './containers/user/UserHome';
+import CoreUserHome from './containers/coreuser/CoreUserHome';
+import ReverseFactor from './containers/coreuser/ReverseFactor';
+import Approval from './containers/coreuser/Approval'
+import LoginPage from './containers/Login'
 export const AppNavigator = StackNavigator({
   Home: {
     screen: HomeScreen,
@@ -23,14 +27,18 @@ export const AppNavigator = StackNavigator({
       headerTitle: '详情',
     },
   },
-  // Login: {
-  //   screen: LoginPage,
-  //   navigationOptions: {
-  //     headerTitle: '登录',
-  //   },
-  // }
+  Login: {
+    screen: LoginPage,
+    navigationOptions: {
+      headerTitle: '登录',
+    },
+  },
+  CoreUserHome: { screen: CoreUserHome},
+  ReverseFactor: { screen: ReverseFactor },
+  Approval: { screen: Approval },
+
 }, {
-  initialRouteName: 'Details',
+  initialRouteName: 'CoreUserHome',
 });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
