@@ -1,46 +1,39 @@
 /*
  * @Author: aran.hu 
- * @Date: 2018-01-08 14:14:47 
+ * @Date: 2018-01-08 20:16:21 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-08 20:26:05
+ * @Last Modified time: 2018-01-08 20:56:32
  */
 
+//import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import RefreshView from '../../common/RefreshView'
-import { FaeComponent } from '@faegroup/common'
 import { connect } from 'react-redux';
+import { FaeComponent } from '@faegroup/common'
 const {
   W,
 	H,
 } = FaeComponent
-import Util from './Util'
 import Card from './Card'
 
-class ReverseFactorAll extends Component {
-	static navigationOptions = {
-		tabBarLabel: '全部',
-	}
+class ReverseFactor extends Component {
+	static navigationOptions = ({ navigation, screenProps }) => ({
+		tabBarLabel: '反向保理',
+	});
 
 	state = {
-		data: Util.makeData(),
-	}
-
-	onPress() {
-	}
-
-	componentDidMount() {
-		// console.log(this.props)
+		data: '1'.repeat(10).split('')
 	}
 
 	_renderItem = (isTriggerPressFn, data) => {
 		return (
-			<View style={{ marginBottom: 10 }} >
+			<View style={{ width: W, marginBottom: 10 }} >
 				<Card />
 			</View>
 		)
 	}
-
+	
 	render() {
 		return (
 			<View style={styles.container}>
@@ -62,9 +55,9 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 });
+
 const mapStateToProps = state => ({
 	state: state,
 });
 
-//make this component available to the app
-export default connect(mapStateToProps)(ReverseFactorAll);
+export default connect()(ReverseFactor);

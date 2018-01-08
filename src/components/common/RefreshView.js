@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-08 15:53:58 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-08 16:11:25
+ * @Last Modified time: 2018-01-08 21:04:37
  */
 
 import React, { Component } from 'react';
@@ -28,7 +28,7 @@ class RefreshView extends Component {
 				alignContent: 'center',
 				justifyContent: 'center'
 			}}>
-				<Text>加载更多</Text>
+				<Text>- 没有更多了 -</Text>
 			</View>
 		)
 	}

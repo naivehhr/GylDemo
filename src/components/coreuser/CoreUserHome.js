@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-08 10:19:10 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-08 19:17:25
+ * @Last Modified time: 2018-01-08 20:12:19
  */
 
 //import liraries
@@ -170,6 +170,7 @@ class CoreUserHome extends Component {
 			</View>
 		)
 	}
+	
 	render() {
 		return (
 			<View style={styles.container}>
@@ -190,7 +191,6 @@ class CoreUserHome extends Component {
 	}
 }
 
-// define your styles
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,

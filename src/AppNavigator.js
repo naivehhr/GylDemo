@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 10:22:45 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-08 19:15:52
+ * @Last Modified time: 2018-01-08 20:53:25
  */
 
 import React from 'react';
@@ -14,9 +14,11 @@ import HomeScreen from './HomeScreen'
 import DetailsScreen from './DetailsScreen';
 // import UserHome from './containers/user/UserHome';
 import CoreUserHome from './containers/coreuser/CoreUserHome';
+import UserHome from './containers/user/UserHome';
 import ReverseFactor from './containers/coreuser/ReverseFactor';
 import Approval from './containers/coreuser/Approval'
 import LoginPage from './containers/Login'
+import Loan from './containers/user/Loan'
 export const AppNavigator = StackNavigator({
   Home: {
     screen: HomeScreen,
@@ -36,9 +38,10 @@ export const AppNavigator = StackNavigator({
   CoreUserHome: { screen: CoreUserHome},
   ReverseFactor: { screen: ReverseFactor },
   Approval: { screen: Approval },
-
+  UserHome: { screen: UserHome},
+  Loan: { screen: Loan },
 }, {
-  initialRouteName: 'CoreUserHome',
+  initialRouteName: 'Loan',
 });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
