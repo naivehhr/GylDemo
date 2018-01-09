@@ -1,22 +1,25 @@
 /*
  * @Author: aran.hu 
- * @Date: 2018-01-08 21:02:53 
+ * @Date: 2018-01-09 14:19:08 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-08 21:04:06
+ * @Last Modified time: 2018-01-09 14:19:39
  */
 
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-class FinancingCconfirm extends Component {
-	static navigationOptions = {
-		title: '融资确认'
-	}
+// create a component
+class LoanOrderApplying extends Component {
+
+	static navigationOptions = ({ navigation, screenProps }) => ({
+		tabBarLabel: '申请中',
+	});
+	
 	render() {
 		return (
 			<View style={styles.container}>
-				<Text>FinancingCconfirm</Text>
+				<Text>LoanOrderApplying</Text>
 			</View>
 		);
 	}
@@ -33,4 +36,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default FinancingCconfirm;
+export default LoanOrderApplying;

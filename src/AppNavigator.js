@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 10:22:45 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-08 20:53:25
+ * @Last Modified time: 2018-01-09 19:01:06
  */
 
 import React from 'react';
@@ -18,7 +18,14 @@ import UserHome from './containers/user/UserHome';
 import ReverseFactor from './containers/coreuser/ReverseFactor';
 import Approval from './containers/coreuser/Approval'
 import LoginPage from './containers/Login'
-import Loan from './containers/user/Loan'
+import Register from './containers/Register'
+import Loan from './containers/user/loan/Loan'
+import FinancingConfirm from './containers/user/loan/FinancingConfirm'
+import LoanOrder from './containers/user/loanorder/LoanOrder'
+import LoanOrderDetail from './containers/user/loanorder/LoanOrderDetail'
+import Account from './containers/account/Account'
+import Agent from './containers/account/Agent'
+import EnterpriseInfo from './containers/account/EnterpriseInfo'
 export const AppNavigator = StackNavigator({
   Home: {
     screen: HomeScreen,
@@ -40,8 +47,15 @@ export const AppNavigator = StackNavigator({
   Approval: { screen: Approval },
   UserHome: { screen: UserHome},
   Loan: { screen: Loan },
+  FinancingConfirm: { screen: FinancingConfirm},
+  LoanOrder: { screen: LoanOrder},
+  LoanOrderDetail: { screen: LoanOrderDetail},
+  Register: { screen: Register},
+  Account: { screen: Account},
+  Agent: { screen: Agent},
+  EnterpriseInfo: { screen: EnterpriseInfo},
 }, {
-  initialRouteName: 'Loan',
+  initialRouteName: 'Account',
 });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (

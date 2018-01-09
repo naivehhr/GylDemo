@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-08 10:20:25 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-08 20:11:33
+ * @Last Modified time: 2018-01-09 15:24:19
  */
 
 //import liraries
@@ -23,6 +23,7 @@ const {
 	H,
 } = FaeComponent
 import RefreshView from '../common/RefreshView'
+const TouchBar = Platform.OS == 'ios' ? TouchableOpacity : TouchableNativeFeedback
 
 class UserHome extends Component {
 
@@ -35,20 +36,19 @@ class UserHome extends Component {
 	}
 
 	_renderItem = () => {
-		let TouchBar = Platform.OS == 'ios' ? TouchableOpacity : TouchableNativeFeedback
 		return (
 			<View>
 				<View style={styles.header}>
 					<TouchableOpacity onPress={() => { }} >
 						<Image
 							style={styles.icon}
-							source={require('../coreuser/img/me.png')}
+							source={require('../../components/img/me.png')}
 						/>
 					</TouchableOpacity>
 					<TouchableOpacity onPress={() => { }} >
 						<Image
 							style={styles.icon}
-							source={require('../coreuser/img/notification.png')}
+							source={require('../../components/img/notification.png')}
 						/>
 					</TouchableOpacity>
 				</View>
@@ -90,7 +90,7 @@ class UserHome extends Component {
 						}}>
 							<Image
 								style={styles.icon}
-								source={require('../coreuser/img/enter.png')}
+								source={require('../../components/img/enter.png')}
 							/>
 						</View>
 					</View>
@@ -120,7 +120,7 @@ class UserHome extends Component {
 						}}>
 							<Image
 								style={styles.icon}
-								source={require('../coreuser/img/enter.png')}
+								source={require('../../components/img/enter.png')}
 							/>
 						</View>
 					</View>
@@ -134,7 +134,7 @@ class UserHome extends Component {
 			const { navigation } = this.props
 			switch (type) {
 				case 'fxbl':
-					navigation.navigate('ReverseFactor')
+					navigation.navigate('LoanOrder')
 					break;
 				default:
 			}

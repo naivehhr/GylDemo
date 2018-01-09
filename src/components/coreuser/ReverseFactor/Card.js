@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-08 14:47:29 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-08 19:19:11
+ * @Last Modified time: 2018-01-09 14:39:10
  */
 
 import React, { Component } from 'react';
@@ -65,7 +65,7 @@ class Card extends Component {
 								<View style={{ flex: 1, marginLeft: 15, height: 50, }}>
 									<Image
 										style={{ resizeMode: 'contain', width: 70 }}
-										source={require('../img/tag-1.png')}
+										source={require('../../img/tag-1.png')}
 									/>
 								</View>
 								<View style={{ marginRight: 15, width: 70, justifyContent: 'center' }}>
@@ -76,7 +76,7 @@ class Card extends Component {
 								<View style={{ flex: 1, marginLeft: 15, height: 50, }}>
 									<Image
 										style={{ resizeMode: 'contain', width: 70 }}
-										source={require('../img/tag-2.png')}
+										source={require('../../img/tag-2.png')}
 									/>
 								</View>
 								<View style={{ marginRight: 15, width: 70, justifyContent: 'center' }}>

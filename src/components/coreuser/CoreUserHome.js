@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-08 10:19:10 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-08 20:12:19
+ * @Last Modified time: 2018-01-09 14:36:38
  */
 
 //import liraries
@@ -68,13 +68,13 @@ class CoreUserHome extends Component {
 					<TouchableOpacity onPress={() => { }} >
 						<Image
 							style={styles.icon}
-							source={require('./img/me.png')}
+							source={require('../../components/img/me.png')}
 						/>
 					</TouchableOpacity>
 					<TouchableOpacity onPress={() => { }} >
 						<Image
 							style={styles.icon}
-							source={require('./img/notification.png')}
+							source={require('../../components/img/notification.png')}
 						/>
 					</TouchableOpacity>
 				</View>
@@ -92,7 +92,7 @@ class CoreUserHome extends Component {
 					</View>
 					<Image
 						style={{height: 130, width: 5}}
-						source={require('./img/xuxian.png')}
+						source={require('../../components/img/xuxian.png')}
 					/>
 					<View style={styles.money}>
 						<Text style={{
@@ -131,7 +131,7 @@ class CoreUserHome extends Component {
 						}}>
 							<Image
 								style={styles.icon}
-								source={require('./img/enter.png')}
+								source={require('../../components/img/enter.png')}
 							/>
 						</View>
 					</View>
@@ -161,7 +161,7 @@ class CoreUserHome extends Component {
 						}}>
 							<Image
 								style={styles.icon}
-								source={require('./img/enter.png')}
+								source={require('../../components/img/enter.png')}
 							/>
 						</View>
 					</View>
