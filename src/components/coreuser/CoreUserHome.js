@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-08 10:19:10 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-09 14:36:38
+ * @Last Modified time: 2018-01-10 16:02:22
  */
 
 //import liraries
@@ -18,14 +18,14 @@ import {
 	Platform
 } from 'react-native';
 import RefreshView from '../common/RefreshView'
-import { NavAction } from '../../actions'
+import { NavAction, UserAction } from '../../actions'
 
 import { FaeComponent } from '@faegroup/common'
 const {
   W,
 	H,
 } = FaeComponent
-// create a component
+
 class CoreUserHome extends Component {
 
 	static navigationOptions = ({ navigation, screenProps }) => ({
@@ -41,7 +41,7 @@ class CoreUserHome extends Component {
 	}
 
 	componentDidMount() {
-		this.props.dispatch(NavAction.setTopNavigator({ topNavigation: this.props.navigation }))
+		this.props.dispatch(UserAction.updateUserInfo({roleType: 'user'}))
 	}
 
 	onRefreshFun = () => {

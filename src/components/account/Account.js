@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-09 18:52:36 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-10 14:19:10
+ * @Last Modified time: 2018-01-10 15:25:28
  */
 
 import React, { Component } from 'react';
@@ -33,15 +33,14 @@ class Account extends Component {
 	})
 
 	componentDidMount() {
-		this.props.dispatch(updateUserInfo({isLoggedIn: true}))
-		this.props.dispatch(FaeAction.show_loading( "处理中..."))
-		setTimeout(()=> {
-			this.props.dispatch(FaeAction.hide_loading())
-		}, 1000)
+		// this.props.dispatch(updateUserInfo({isLoggedIn: true}))
+		// this.props.dispatch(FaeAction.show_loading( "处理中..."))
+		// setTimeout(()=> {
+		// 	this.props.dispatch(FaeAction.hide_loading())
+		// }, 1000)
 	}
 
 	componentWillReceiveProps(nextProps) {
-		console.log(nextProps)
 	}
 
 	_onPress = () => {

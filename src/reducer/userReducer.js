@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 17:34:31 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-08 19:07:09
+ * @Last Modified time: 2018-01-10 15:59:45
  */
 import {
 	UPDATE_USER
@@ -10,7 +10,7 @@ import {
 
 const initialAuthState = { 
   isLoggedIn: false,
-  type: user, // core
+  roleType: 'coreuser', // 'coreuser' 'user'
  };
 
 export default function user(state = initialAuthState, action) {

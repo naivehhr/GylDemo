@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 10:22:45 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-10 15:16:31
+ * @Last Modified time: 2018-01-10 15:49:49
  */
 
 import React from 'react';
@@ -27,7 +27,10 @@ import LoanOrderDetail from './containers/user/loanorder/LoanOrderDetail'
 import Account from './containers/account/Account'
 import Agent from './containers/account/Agent'
 import EnterpriseInfo from './containers/account/EnterpriseInfo'
+
+import App from './containers/App'
 export const AppNavigator = StackNavigator({
+  App: { screen: App},
   Home: {
     screen: HomeScreen,
   },
@@ -56,18 +59,21 @@ export const AppNavigator = StackNavigator({
   Agent: { screen: Agent },
   EnterpriseInfo: { screen: EnterpriseInfo },
 }, {
-    initialRouteName: 'Account',
+    initialRouteName: 'App',
+    contentComponent: <View ><Text>123123</Text></View>
   });
 
-const AppWithNavigationState = ({ dispatch, nav }) => (
-  <View style={{flex: 1}}>
-    <FaeComponent.CustomerLoading />
-    <AppNavigator />
-  </View>
-);
+const AppWithNavigationState = (props) => {
+  return (
+    <View style={{ flex: 1 }}>
+      <FaeComponent.CustomerLoading />
+      <AppNavigator />
+    </View>
+  )
+};
 
 const mapStateToProps = state => ({
-  nav: state.nav,
+  state: state,
 });
 
 export default connect(mapStateToProps)(AppWithNavigationState);

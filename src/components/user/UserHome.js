@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-08 10:20:25 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-09 15:24:19
+ * @Last Modified time: 2018-01-10 16:01:26
  */
 
 //import liraries
@@ -16,7 +16,7 @@ import {
 	Platform,
 	Image
 } from 'react-native';
-import { NavAction } from '../../actions'
+import { NavAction, UserAction } from '../../actions'
 import { FaeComponent } from '@faegroup/common'
 const {
   W,
@@ -32,7 +32,7 @@ class UserHome extends Component {
 	})
 
 	componentDidMount() {
-		this.props.dispatch(NavAction.setTopNavigator({ topNavigation: this.props.navigation }))
+		this.props.dispatch(UserAction.updateUserInfo({roleType: 'coreuser'}))
 	}
 
 	_renderItem = () => {
