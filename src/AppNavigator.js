@@ -2,13 +2,14 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 10:22:45 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-09 19:01:06
+ * @Last Modified time: 2018-01-10 15:16:31
  */
 
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { addNavigationHelpers, StackNavigator } from 'react-navigation';
 import { connect } from 'react-redux';
+import { FaeComponent } from '@faegroup/common'
 
 import HomeScreen from './HomeScreen'
 import DetailsScreen from './DetailsScreen';
@@ -42,24 +43,27 @@ export const AppNavigator = StackNavigator({
       headerTitle: '登录',
     },
   },
-  CoreUserHome: { screen: CoreUserHome},
+  CoreUserHome: { screen: CoreUserHome },
   ReverseFactor: { screen: ReverseFactor },
   Approval: { screen: Approval },
-  UserHome: { screen: UserHome},
+  UserHome: { screen: UserHome },
   Loan: { screen: Loan },
-  FinancingConfirm: { screen: FinancingConfirm},
-  LoanOrder: { screen: LoanOrder},
-  LoanOrderDetail: { screen: LoanOrderDetail},
-  Register: { screen: Register},
-  Account: { screen: Account},
-  Agent: { screen: Agent},
-  EnterpriseInfo: { screen: EnterpriseInfo},
+  FinancingConfirm: { screen: FinancingConfirm },
+  LoanOrder: { screen: LoanOrder },
+  LoanOrderDetail: { screen: LoanOrderDetail },
+  Register: { screen: Register },
+  Account: { screen: Account },
+  Agent: { screen: Agent },
+  EnterpriseInfo: { screen: EnterpriseInfo },
 }, {
-  initialRouteName: 'Account',
-});
+    initialRouteName: 'Account',
+  });
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
-  <AppNavigator  />
+  <View style={{flex: 1}}>
+    <FaeComponent.CustomerLoading />
+    <AppNavigator />
+  </View>
 );
 
 const mapStateToProps = state => ({

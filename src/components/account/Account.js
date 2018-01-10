@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-09 18:52:36 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-09 20:04:23
+ * @Last Modified time: 2018-01-10 14:19:10
  */
 
 import React, { Component } from 'react';
@@ -10,9 +10,10 @@ import {
 	View,
 	Text,
 	StyleSheet,
-	ScrollView
+	ScrollView,
+	Image
 } from 'react-native';
-import { FaeComponent } from '@faegroup/common'
+import { FaeComponent, FaeAction } from '@faegroup/common'
 const {
   W,
 	H,
@@ -24,11 +25,29 @@ const {
 import {
 	_blue
 } from '../common/colors'
+import { updateUserInfo } from '../../actions/user'
 class Account extends Component {
 
 	static navigationOptions = () => ({
 		title: '账户'
 	})
+
+	componentDidMount() {
+		this.props.dispatch(updateUserInfo({isLoggedIn: true}))
+		this.props.dispatch(FaeAction.show_loading( "处理中..."))
+		setTimeout(()=> {
+			this.props.dispatch(FaeAction.hide_loading())
+		}, 1000)
+	}
+
+	componentWillReceiveProps(nextProps) {
+		console.log(nextProps)
+	}
+
+	_onPress = () => {
+
+	}
+
 	render() {
 		return (
 			<ScrollView style={styles.container}>
@@ -37,16 +56,27 @@ class Account extends Component {
 					height: 100,
 					backgroundColor: _blue,
 				}}>
-					<View style={{ flex: 4, backgroundColor: 'red' }}>
+					<View style={{ flex: 4, justifyContent: 'center', alignItems: 'center' }}>
+						<Image
+							style={{ resizeMode: 'contain', width: 40, height: 40, }}
+							source={require('../img/portrait.png')}
+						/>
 					</View>
-					<View style={{ flex: 10, backgroundColor: 'blue' }}>
+					<View style={{ flex: 10, justifyContent: 'center', alignItems: 'flex-start' }}>
+						<Text style={{ color: 'white' }}>12318458876</Text>
 					</View>
-					<View style={{ flex: 3, backgroundColor: 'yellow' }}>
+					<View style={{ flex: 3, justifyContent: 'center', alignItems: 'center' }}>
+						<Image
+							style={{ resizeMode: 'contain', width: 20, height: 20 }}
+							source={require('../img/arrow-right-white.png')}
+						/>
 					</View>
-					<View>
-					<CombineButton onPress={this._onPress.bind(this, 'yonghuxieyi')} leftText={'债权转让协议'} />
-
-					</View>
+				</View>
+				<View style={{ marginTop: 20 }}>
+					<CombineButton onPress={this._onPress.bind(this, 'yonghuxieyi')} leftText={'用款企业'} />
+				</View>
+				<View style={{ marginTop: 20 }}>
+					<CombineButton onPress={this._onPress.bind(this, 'yonghuxieyi')} leftText={'个体户'} />
 				</View>
 			</ScrollView>
 		);

@@ -1,15 +1,14 @@
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
 import thunk from 'redux-thunk'
-import {persistStore, persistCombineReducers} from 'redux-persist';
+import { persistStore, persistCombineReducers } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'
-import * as appReducer from './src/reducer'
-
+import appReducer from './src/reducer'
 const config = {
   key: 'root',
   storage,
+  blacklist: ['nav', 'loading']
 }
 const reducer = persistCombineReducers(config, appReducer)
-
 const enhancer = compose(
   applyMiddleware(
     thunk
