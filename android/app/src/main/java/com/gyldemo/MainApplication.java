@@ -3,6 +3,9 @@ package com.gyldemo;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.rnfs.RNFSPackage;
+import fr.bamlab.rnimageresizer.ImageResizerPackage;
+import com.imagepicker.ImagePickerPackage;
 import com.remobile.toast.RCTToastPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativecomponent.swiperefreshlayout.RCTSwipeRefreshLayoutPackage;
@@ -26,6 +29,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNFSPackage(),
+            new ImageResizerPackage(),
+            new ImagePickerPackage(),
             new RCTToastPackage(),
             new VectorIconsPackage(),
             new RCTSwipeRefreshLayoutPackage()

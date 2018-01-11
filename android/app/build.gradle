@@ -141,6 +141,9 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-fs')
+    compile project(':react-native-image-resizer')
+    compile project(':react-native-image-picker')
     compile project(':@remobile/react-native-toast')
     compile project(':react-native-vector-icons')
     compile project(':react-native-refreshflatlist')

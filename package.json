@@ -13,6 +13,7 @@
     "react-native": "0.51.0",
     "react-native-dismiss-keyboard": "^1.0.0",
     "react-native-percentage-circle": "^1.0.6",
+    "react-native-photo-upload": "^1.1.1",
     "react-native-refreshflatlist": "^1.2.1",
     "react-native-vector-icons": "^4.4.3",
     "react-navigation": "^1.0.0-beta.22",

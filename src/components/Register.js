@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-09 15:49:32 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-09 18:16:33
+ * @Last Modified time: 2018-01-11 16:23:48
  */
 
 //import liraries
@@ -30,7 +30,6 @@ const {
 	CombTextInput
  } = FaeComponent
 import UploadImg from './common/UploadImg'
-
 class Register extends Component {
 	static navigationOptions = () => ({
 		title: '注册',
@@ -145,14 +144,10 @@ class Register extends Component {
 						<View style={{ paddingTop: 10 }}>
 							<Text>代理人身份证照片</Text>
 						</View>
-						<View style={{ flexDirection: 'row', marginTop: 10 }}>
-							<View style={{ flex: 1 }}>
-								<UploadImg msg={'正面\n请确保图片清晰可辨'} />
-							</View>
-							<View style={{ flex: 1, marginLeft: 10, }}>
-								<UploadImg msg={'反面\n请确保图片清晰可辨'} />
-							</View>
-						</View>
+						<View style={{height: 10}}/>
+						<UploadImg msg={'正面\n请确保图片清晰可辨'} />
+						<View style={{height: 10}}/>
+						<UploadImg msg={'反面\n请确保图片清晰可辨'} />
 						<View style={{ marginTop: 10 }}>
 							<UploadImg msg={'手持身份证照片\n请确保图片清晰可辨'} />
 						</View>

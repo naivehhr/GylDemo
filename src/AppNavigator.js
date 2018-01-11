@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 10:22:45 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-10 15:49:49
+ * @Last Modified time: 2018-01-11 14:28:06
  */
 
 import React from 'react';
@@ -59,8 +59,7 @@ export const AppNavigator = StackNavigator({
   Agent: { screen: Agent },
   EnterpriseInfo: { screen: EnterpriseInfo },
 }, {
-    initialRouteName: 'App',
-    contentComponent: <View ><Text>123123</Text></View>
+    initialRouteName: 'Register'
   });
 
 const AppWithNavigationState = (props) => {
