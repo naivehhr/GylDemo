@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-09 15:49:32 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-11 16:23:48
+ * @Last Modified time: 2018-01-12 11:19:50
  */
 
 //import liraries
@@ -116,7 +116,7 @@ class Register extends Component {
 						/>
 						<Line />
 						<View style={{ marginTop: 10, marginBottom: 10 }}><Text>营业执照照片</Text></View>
-						<UploadImg msg={'请确保图片清晰可辨'} />
+						<UploadImg msg={'请确保图片清晰可辨1'} />
 					</View>
 				</View>
 				<View style={{ backgroundColor: 'white', marginTop: 10 }}>
@@ -144,9 +144,9 @@ class Register extends Component {
 						<View style={{ paddingTop: 10 }}>
 							<Text>代理人身份证照片</Text>
 						</View>
-						<View style={{height: 10}}/>
+						<View style={{ height: 10 }} />
 						<UploadImg msg={'正面\n请确保图片清晰可辨'} />
-						<View style={{height: 10}}/>
+						<View style={{ height: 10 }} />
 						<UploadImg msg={'反面\n请确保图片清晰可辨'} />
 						<View style={{ marginTop: 10 }}>
 							<UploadImg msg={'手持身份证照片\n请确保图片清晰可辨'} />
