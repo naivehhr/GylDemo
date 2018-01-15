@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ART } from 'react-native';
-const { Shape, Path } = ART;
+const { Shape, Path, Group } = ART;
 
 /**
  * Wedge is a React component for drawing circles, wedges and arcs. Like other
@@ -145,12 +145,18 @@ export default class Wedge extends Component {
 		const or = Math.max(innerRadius, outerRadius);
 
 		let path;
+		let path1 = this._createCirclePath(or, ir);
 		if (endAngle >= startAngle + 360) {
 			path = this._createCirclePath(or, ir);
 		} else {
 			path = this._createArcPath(originX, originY, startAngle, endAngle, or, ir);
 		}
 
-		return <Shape {...this.props} d={path} />;
+		return (
+			<Group>
+				<Shape {...this.props} fill={'red'} d={path1} />
+				<Shape {...this.props} d={path} />
+			</Group>
+		)
 	}
 }

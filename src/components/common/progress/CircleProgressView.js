@@ -200,7 +200,7 @@ export  default  class CircleProgressView extends Component {
         const path0 = this.getBase(0);
         const path00 = this.getBase(1);
 
-        let pushStr = "M{0},{1} A{2},{3} 0 {4},{5} {6},{7}";
+        let pushStr = "M{0},{1} A{2},{3} 0 {4},{5} {6},{7}"; // 这里是什么格式的呢
         let result = pushStr.format(this.state.startX, this.state.startY, this.state.originR, this.state.originR,
             0, 1, this.state.endX, this.state.endY);
         // console.log(result);
