@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-08 14:02:37 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-15 13:33:36
+ * @Last Modified time: 2018-01-16 16:32:19
  */
 
 
@@ -14,7 +14,6 @@ import ReverseFactorAll from './ReverseFactorAll'
 import ReverseFactorNotFinance from './ReverseFactorNotFinance'
 import ReverseFactorNoApproval from './ReverseFactorNoApproval'
 import ReverseFactorRaised from './ReverseFactorRaised'
-
 const ReverseFactorTabNav = TabNavigator({
   all: { screen: ReverseFactorAll },
   NotFinance: { screen: ReverseFactorNotFinance},
