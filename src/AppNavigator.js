@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-04 10:22:45 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-15 14:20:18
+ * @Last Modified time: 2018-01-15 17:42:07
  */
 
 import React from 'react';
@@ -27,8 +27,9 @@ import LoanOrderDetail from './containers/user/loanorder/LoanOrderDetail'
 import Account from './containers/account/Account'
 import Agent from './containers/account/Agent'
 import EnterpriseInfo from './containers/account/EnterpriseInfo'
-
+import LottieTest from './components/common/LottieTest'
 import App from './containers/App'
+
 export const AppNavigator = StackNavigator({
   App: { screen: App},
   Home: {
@@ -58,8 +59,9 @@ export const AppNavigator = StackNavigator({
   Account: { screen: Account },
   Agent: { screen: Agent },
   EnterpriseInfo: { screen: EnterpriseInfo },
+  LottieTest: { screen: LottieTest },
 }, {
-    initialRouteName: 'Details'
+    initialRouteName: 'LottieTest'
   });
 
 const AppWithNavigationState = (props) => {

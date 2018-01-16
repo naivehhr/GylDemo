@@ -9,6 +9,7 @@
   "dependencies": {
     "@faegroup/common": "0.1.9",
     "@remobile/react-native-toast": "^1.0.7",
+    "lottie-react-native": "^2.3.2",
     "react": "16.0.0",
     "react-native": "0.51.0",
     "react-native-counter": "^0.2.0",
