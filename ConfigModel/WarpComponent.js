@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-16 17:54:49 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-16 18:27:46
+ * @Last Modified time: 2018-01-17 17:43:09
  */
 
 
@@ -17,9 +17,12 @@ import ReverseFactorTabNav from '../src/components/coreuser/ReverseFactor/Revers
 import TabNav from './TabNav'
 import { connect } from 'react-redux';
 
-export const getWarpPage = (params) => {
+// 这个只负责Tabs 和 Draw 等带嵌套的东东
+export const getWarpComponent = (params) => {
 	const { componentType } = params
-	return class WarppComponent extends Component {
+	if(!params) console.warn('配置页面参数为空')
+	return class WarpComponent extends Component {
+		
 		render() {
 			// 这里怎么搞？ 动态的props传进来, 先不考虑redux维护用户信息等乱七八糟的
 			/**
@@ -29,13 +32,27 @@ export const getWarpPage = (params) => {
 			 * 页面请求参数信息
 			 * 页面跳转信息
 			 */
+
+			 /**
+				* 这里主要传递有几个tab就行了
+			  */
+			
 			return (
-				<TabNav />
+				<TabNav screenProps={params}/>
 			);
 		}
 	}
 	const mapStateToProps = state => ({
 		state: state,
 	});
-	const Page = connect(mapStateToProps)(WarppComponent);
+	const Page = connect(mapStateToProps)(WarpComponent);
 }
+
+// /**
+//  * 区别容器组件
+//  * @param {object} params 
+//  */
+// export const getWarpComponent = (params) => {
+// 	if(!params) console.warn('为传入参数')
+// 	return <TabNav screenProps={params}/>
+// }

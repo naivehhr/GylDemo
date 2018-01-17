@@ -5,6 +5,7 @@ import { View, Text, StyleSheet } from 'react-native';
 // create a component
 class CommonComponent extends Component {
 	render() {
+		console.log('CommonComponent', this.props)
 		return (
 			<View style={styles.container}>
 				<Text>CommonComponent</Text>
