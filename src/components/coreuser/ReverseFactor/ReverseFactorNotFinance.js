@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-08 14:23:53 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-08 14:32:01
+ * @Last Modified time: 2018-01-25 18:59:28
  */
 
 //import liraries
@@ -12,7 +12,7 @@ import { View, Text, StyleSheet } from 'react-native';
 // create a component
 class ReverseFactorNotFinance extends Component {
 	static navigationOptions = {
-		tabBarLabel: '未融资',
+		tabBarLabel: '未融资1',
 	}
 	render() {
 		return (

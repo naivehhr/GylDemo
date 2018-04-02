@@ -54,7 +54,10 @@ const _config = {
         }
       }
     }
-  }
+  },
+  'p3': {
+    'screen': 'CommonComponent',
+  },
 }
 
 function getWarpComponent(params) {

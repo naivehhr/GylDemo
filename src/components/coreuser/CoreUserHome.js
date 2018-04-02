@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-08 10:19:10 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-10 16:02:22
+ * @Last Modified time: 2018-01-25 18:57:44
  */
 
 //import liraries
@@ -41,7 +41,7 @@ class CoreUserHome extends Component {
 	}
 
 	componentDidMount() {
-		this.props.dispatch(UserAction.updateUserInfo({roleType: 'user'}))
+		// this.props.dispatch(UserAction.updateUserInfo({roleType: 'user'}))
 	}
 
 	onRefreshFun = () => {

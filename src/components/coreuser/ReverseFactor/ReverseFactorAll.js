@@ -2,7 +2,7 @@
  * @Author: aran.hu 
  * @Date: 2018-01-08 14:14:47 
  * @Last Modified by: aran.hu
- * @Last Modified time: 2018-01-15 14:19:02
+ * @Last Modified time: 2018-01-25 19:04:23
  */
 
 import React, { Component } from 'react';
@@ -32,7 +32,11 @@ class ReverseFactorAll extends Component {
 	componentDidMount() {
 		// console.log(this.props)
 	}
-
+	
+	componentWillUnmount () {
+		console.log('卸载')
+	}
+	
 	_renderItem = (isTriggerPressFn, data) => {
 		return (
 			<View style={{ marginBottom: 10 }} >
